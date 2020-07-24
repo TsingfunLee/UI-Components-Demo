@@ -18,10 +18,7 @@ function all () {
 function css (){
   return src('../src/style/components/*.scss')
     .pipe(sass.sync())   
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie > 8']
-    }))
-    
+    .pipe(autoprefixer())    
     .pipe(cleanCSS())
     .pipe(dest('../dist/libs/style'))
 }
