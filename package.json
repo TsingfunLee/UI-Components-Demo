@@ -1,0 +1,65 @@
+{
+  "name": "lee-ui-components",
+  "version": "0.2.1",
+  "title": "LEEUI",
+  "description": "An UI toolkit on vue.js",
+  "keywords": [
+    "UI",
+    "Component",
+    "Vue"
+  ],
+  "main": "dist/index.common.js",
+  "sideEffects": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name index src/index.js && webpack --config build/webpack.components.js && npx gulp --gulpfile build/gulp.css.js",
+    "lint": "vue-cli-service lint && npx stylelint \"**/*.{scss,vue}\" --fix",
+    "lint:es": "vue-cli-service lint --fix",
+    "lint:style": "npx stylelint \"**/*.{scss,vue}\" --fix",
+    "test": "vue-cli-service test:unit",
+    "publish": "npm publish --access public",
+    "doc": "npx vuese gen"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-plugin-unit-jest": "^4.4.6",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/test-utils": "^1.0.3",
+    "@vuese/cli": "^2.13.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "typescript": "^3.9.7",
+    "vue-router": "^3.3.4",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

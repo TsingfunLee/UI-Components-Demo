@@ -1,0 +1,49 @@
+.button {
+  padding: 12px 20px;
+  font-size: $--small-text;
+  color: white;
+  border: none;
+  outline: none;
+
+  /* type */
+  &.primary {
+    background-color: $--primary-color;
+
+    &:hover {
+      background-color: mix($--primary-color, white, 80%);
+    }
+  }
+
+  &.success {
+    background-color: $--success-color;
+
+    &:hover {
+      background-color: mix($--success-color, white, 80%);
+    }
+  }
+
+  &.warning {
+    background-color: $--warning-color;
+
+    &:hover {
+      background-color: mix($--warning-color, white, 80%);
+    }
+  }
+
+  &.error {
+    background-color: $--error-color;
+
+    &:hover {
+      background-color: mix($--error-color, white, 80%);
+    }
+  }
+
+  /* shape */
+  &.plain {
+    border-radius: 5px;
+  }
+
+  &.round {
+    border-radius: 20px;
+  }
+}
