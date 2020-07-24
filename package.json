@@ -20,6 +20,15 @@
     "publish": "npm publish --access public",
     "doc": "npx vuese gen"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue,scss}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
   "dependencies": {
     "vue": "^2.6.11"
   },
