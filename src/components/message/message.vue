@@ -20,12 +20,15 @@
 </template>
 
 <script>
+// 消息提示
 export default {
   name: 'LeeMessage',
   data() {
     return {
+      // @vuese
       // 消息图标
       icon: null,
+      // @vuese
       // 消息类型
       // ``primary`` / ``success`` / ``warning`` / ``error``
       type: 'primary',
