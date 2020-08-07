@@ -1,15 +1,16 @@
-import LeeButton from './components/button'
-import LeeMessage from './components/message'
+import Button from './components/button'
+import Message from './components/message'
 
 const components = [
-  LeeButton,
-  LeeMessage
+  Button,
 ]
 
 const install = (Vue)=>{
   components.forEach(component => {
     Vue.component(component.name, component)
   })
+
+  Vue.prototype.$message = Message
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

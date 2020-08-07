@@ -1,9 +1,63 @@
 @import '../common/var.scss';
+
 .message-box {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 15px 20px;
+  margin: 30px;
   color: white;
   background-color: mix($--primary-color, white, 50%);
   border: solid 1px $--primary-color;
   border-radius: 5px;
+  transform: translateX(-50%);
+
+  &.primary {
+    background-color: mix($--primary-color, white, 50%);
+    border: solid 1px $--primary-color;
+  }
+
+  &.success {
+    background-color: mix($--success-color, white, 50%);
+    border: solid 1px $--success-color;
+  }
+
+  &.error {
+    background-color: mix($--error-color, white, 50%);
+    border: solid 1px $--error-color;
+  }
+
+  &.warning {
+    background-color: mix($--warning-color, white, 50%);
+    border: solid 1px $--warning-color;
+  }
+}
+
+.lee-fade-enter-active {
+  animation: msg-box-fade-in 1s;
+}
+
+.lee-fade-leave-active {
+  animation: msg-box-fade-out 1s;
+}
+
+@keyframes msg-box-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes msg-box-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }

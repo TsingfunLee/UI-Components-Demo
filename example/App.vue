@@ -41,8 +41,8 @@ export default {
       display: flex;
 
       .nav-list-item {
-        list-style:disc;
         margin-right: 30px;
+        list-style: disc;
       }
     }
   }

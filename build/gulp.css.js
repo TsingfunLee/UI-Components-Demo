@@ -10,7 +10,6 @@ function all () {
     .pipe(sass.sync())
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    // .pipe(rename('iview.css'))
     .pipe(dest('../dist/style'))
 }
 

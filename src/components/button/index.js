@@ -1,7 +1,7 @@
-import LeeButton from './button.vue'
+import Button from './button.vue'
 
-LeeButton.install = function(Vue) {
-  Vue.component(LeeButton.name, LeeButton)
+Button.install = function(Vue) {
+  Vue.component(Button.name, Button)
 }
 
-export default LeeButton
+export default Button

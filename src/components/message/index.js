@@ -1,7 +1,3 @@
-import LeeMessage from './message.vue'
+import Message from './message.js'
 
-LeeMessage.install = function(Vue){
-  Vue.components(LeeMessage.name, LeeMessage)
-}
-
-export default LeeMessage
+export default Message
