@@ -16,13 +16,16 @@
   "sideEffects": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name index src/index.js && webpack --config build/webpack.components.js && npx gulp --gulpfile build/gulp.css.js",
+    "build:js": "vue-cli-service build --target lib --name index src/index.js && webpack --config build/webpack.components.js",
+    "build:css": "npx gulp --gulpfile build/gulp.css.js",
+    "build": "npm run build:js && npm run build:css",
     "lint": "vue-cli-service lint && npx stylelint \"**/*.{scss,vue}\" --fix",
     "lint:es": "vue-cli-service lint --fix",
     "lint:style": "npx stylelint \"**/*.{scss,vue}\" --fix",
     "test": "vue-cli-service test:unit",
     "publish": "npm publish --access public",
-    "doc": "npx vuese gen"
+    "doc": "npx vuese gen",
+    "finish": "npm run build && npm run doc && npm run lint"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

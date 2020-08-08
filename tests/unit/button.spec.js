@@ -1,5 +1,8 @@
 import Vue from 'vue'
-import Button from '@/components/button/button'
+import Button from '@/components/button/'
+import { mount } from '@vue/test-utils'
+
+Vue.use(Button)
 
 describe('button.spec.js', () => {
   let cmp, vm
@@ -47,18 +50,18 @@ describe('button.spec.js', () => {
     })
   })
 
-  it('click', ()=>{
-    let result
-    vm = new Vue({
-      methods:{
-        clickHandle(evt){
-          result = evt
+  it('click', async ()=>{
+    let result 
+    await mount({
+      template: '<lee-button @click="clickHandle"></lee-button>',
+      methods: {
+        clickHandle(){
+          result = 1
         }
-      },
-      template: '<lee-button @click="clickHandle"></lee-button>'
-    })
+      }
+    }).trigger('click')
 
-    expect(result).toBeUndefined()
+    expect(result).toBe(1)
   })
 })
 

@@ -32,6 +32,7 @@ export default {
       // 消息类型
       // ``primary`` / ``success`` / ``warning`` / ``error``
       type: 'primary',
+      // @vuese
       // 提示消息文字
       message: '',
       visible: false,

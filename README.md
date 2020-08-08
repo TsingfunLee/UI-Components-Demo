@@ -3,50 +3,20 @@
 ## About
 基于Vue.js的UI组件
 
-## Project setup
-### 安装依赖
+## NPM Script
+``npm run``
 ```
-npm install
-```
-
-### 编译启动服务器并热更新进行开发
-```
-npm run serve
-```
-
-### 打包
-```
-npm run build
-```
-
-### 语法检查并fix
-```
-npm run lint
-```
-
-### 语法检查es并fix
-```
-npm run lint:es
-```
-
-### 语法检查scss文件并fix
-```
-npm run lint:style
-```
-
-### 单元测试
-```
-npm run test
-```
-
-### 生成各组件说明文档
-```
-npm run doc
-```
-
-### 发布包至 [NPM](https://www.npmjs.com/)
-```
-npm run publish
+serve //编译启动服务器并热更新进行开发
+lint:es //语法检查es并fix
+lint:style //语法检查scss文件并fix
+lint //语法检查并fix
+test //单元测试
+doc //生成各组件说明文档
+build:js //打包js文件
+build:css //打包css文件
+build //打包
+finish //语法检查&生成文档&打包
+publish //发布包至NPM
 ```
 
 ### Customize configuration
@@ -76,6 +46,8 @@ Jest配置在[jest.config.js](./jest.config.js)中。
 - 回调函数执行
 
 - 模拟事件触发，检测核心交互逻辑
+
+可在[Vue Test Utils](https://vue-test-utils.vuejs.org/zh/)中查看更多测试技巧。
 
 ## Type Defination
 TypeScript类型定义文件``“.d.ts"``，用于使用TypeScript项目使用组件库。暂不需要生成。
