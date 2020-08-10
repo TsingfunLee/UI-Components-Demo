@@ -5,15 +5,19 @@
   >
     <div
       v-show="visible"
-      :class="['message-box', type]"
+      class="message-box-wrap"
     >
-      <div class="text">
-        <i
-          v-if="icon"
-          :class="['icon', icon]"
-        />
-        <!-- 提示消息文字 -->
-        <slot>{{ message }}</slot>
+      <div      
+        :class="['message-box', type]"
+      >
+        <div class="text">
+          <i
+            v-if="icon"
+            :class="['icon', icon]"
+          />
+          <!-- 提示消息文字 -->
+          <slot>{{ message }}</slot>
+        </div>
       </div>
     </div>
   </transition>
@@ -49,7 +53,8 @@ export default {
   },
   methods:{
     destroyInstance(){
-      document.body.removeChild(this.$el)
+      document.querySelector('.messages-box').removeChild(this.$el)
+      this.$destroy()
     }
   },
 

@@ -1,36 +1,45 @@
 @import '../common/var.scss';
 
-.message-box {
-  position: absolute;
-  top: 10vh;
-  left: 50%;
-  display: inline-block;
-  padding: 15px 20px;
-  margin: 30px;
-  color: white;
-  background-color: mix($--primary-color, white, 50%);
-  border: solid 1px $--primary-color;
-  border-radius: 5px;
-  transform: translateX(-50%);
+.messages-box {
+  position: fixed;
+  top: 24px;
+  z-index: 9;
+  width: 100%;
+  pointer-events: none;
 
-  &.primary {
-    background-color: mix($--primary-color, white, 50%);
-    border: solid 1px $--primary-color;
-  }
+  .message-box-wrap {
+    text-align: center;
 
-  &.success {
-    background-color: mix($--success-color, white, 50%);
-    border: solid 1px $--success-color;
-  }
+    .message-box {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 15px 20px;
+      margin: 15px;
+      color: white;
+      background-color: mix($--primary-color, white, 50%);
+      border: solid 1px $--primary-color;
+      border-radius: 5px;
 
-  &.error {
-    background-color: mix($--error-color, white, 50%);
-    border: solid 1px $--error-color;
-  }
+      &.primary {
+        background-color: mix($--primary-color, white, 50%);
+        border: solid 1px $--primary-color;
+      }
 
-  &.warning {
-    background-color: mix($--warning-color, white, 50%);
-    border: solid 1px $--warning-color;
+      &.success {
+        background-color: mix($--success-color, white, 50%);
+        border: solid 1px $--success-color;
+      }
+
+      &.error {
+        background-color: mix($--error-color, white, 50%);
+        border: solid 1px $--error-color;
+      }
+
+      &.warning {
+        background-color: mix($--warning-color, white, 50%);
+        border: solid 1px $--warning-color;
+      }
+    }
   }
 }
 

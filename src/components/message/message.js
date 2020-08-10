@@ -15,7 +15,16 @@ const Message = function(options){
   })
 
   instance.$mount()
-  document.body.appendChild(instance.$el)
+
+  let el
+  if(document.querySelector('.messages-box')){
+    el = document.querySelector('.messages-box')
+  }else{
+    el = document.createElement('div')
+    el.className = 'messages-box'
+    document.body.appendChild(el)
+  }
+  el.appendChild(instance.$el)
 
   return instance
 }
