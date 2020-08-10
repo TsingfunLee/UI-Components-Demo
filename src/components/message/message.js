@@ -16,6 +16,20 @@ const Message = function(options){
 
   instance.$mount()
   document.body.appendChild(instance.$el)
+
+  return instance
 }
+
+let types = ['primary', 'success', 'warning', 'error']
+types.forEach(element => {
+  Message[element] = function(msg){
+    Message({
+      type: element,
+      message: msg
+    })
+  }
+})
+
+
 
 export default Message

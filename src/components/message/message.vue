@@ -35,8 +35,10 @@ export default {
       // @vuese
       // 提示消息文字
       message: '',
-      visible: false,
-      duration: 3000
+      // @vuese
+      // 提示时长
+      duration: 3000,
+      visible: false,     
     }
   },
   mounted(){

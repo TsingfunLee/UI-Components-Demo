@@ -35,10 +35,12 @@
 export default {
   methods: {
     click(type){
-      this.$message({
-        message: '这是一条提示消息',
-        type: type
-      })
+      // this.$message({
+      //   message: '这是一条提示消息',
+      //   type: type
+      // })
+
+      this.$message[type]('这是一条提示消息')
     }
   }
 }
