@@ -11,7 +11,7 @@ const Message = function(options){
   }
 
   let instance = new cmt({
-    data: options
+    propsData: options
   })
 
   instance.$mount()

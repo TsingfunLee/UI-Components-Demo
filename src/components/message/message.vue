@@ -15,8 +15,7 @@
             v-if="iconClass"
             :class="[iconClass]"
           />
-          <!-- 提示消息文字 -->
-          <slot>{{ message }}</slot>
+          {{ message }}
         </div>
       </div>
     </div>
@@ -27,21 +26,33 @@
 // 消息提示
 export default {
   name: 'LeeMessage',
-  data() {
-    return {
-      // @vuese
-      // 消息图标
-      iconClass: null,
-      // @vuese
-      // 消息类型
+  props: {
+    // 消息图标
+    iconClass: {
+      // iconfont 类名
+      type: String,
+      default: null
+    },
+    // 消息类型   
+    type: {
       // ``primary`` / ``success`` / ``warning`` / ``error``
-      type: 'primary',
-      // @vuese
-      // 提示消息文字
-      message: '',
-      // @vuese
-      // 提示时长
-      duration: 3000,
+      type: String,
+      default: 'primary'
+    },
+    // 提示消息文字
+    message: {
+      type: String,
+      default: ''
+    },
+    // 提示时长
+    duration: {
+      // 单位ms
+      type: Number,
+      default: 3000
+    },
+  },
+  data() {
+    return {   
       visible: false,     
     }
   },

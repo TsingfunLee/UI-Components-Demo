@@ -10,7 +10,7 @@ function all () {
     .pipe(sass.sync())
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(dest('../dist/style'))
+    .pipe(dest('../dist/libs/style'))
 }
 
 // 各组件单独编译
@@ -22,4 +22,10 @@ function css (){
     .pipe(dest('../dist/libs/style'))
 }
 
-exports.default = parallel(all, css)
+// 拷贝字体文件
+function font(){
+  return src('../src/style/fonts/*')
+    .pipe(dest('../dist/libs/style/fonts'))
+}
+
+exports.default = parallel(all, css, font)
