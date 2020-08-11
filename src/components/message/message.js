@@ -31,11 +31,16 @@ const Message = function(options){
 
 let types = ['primary', 'success', 'warning', 'error']
 types.forEach(element => {
-  Message[element] = function(msg){
-    Message({
-      type: element,
-      message: msg
-    })
+  Message[element] = function(options){
+    let config = {
+      type: element
+    }
+    if(typeof options === 'string'){
+      config.message = options
+    }else{
+      config = Object.assign(options, config)
+    }
+    Message(config)
   }
 })
 

@@ -12,8 +12,8 @@
       >
         <div class="text">
           <i
-            v-if="icon"
-            :class="['icon', icon]"
+            v-if="iconClass"
+            :class="[iconClass]"
           />
           <!-- 提示消息文字 -->
           <slot>{{ message }}</slot>
@@ -31,7 +31,7 @@ export default {
     return {
       // @vuese
       // 消息图标
-      icon: null,
+      iconClass: null,
       // @vuese
       // 消息类型
       // ``primary`` / ``success`` / ``warning`` / ``error``

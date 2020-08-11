@@ -1,6 +1,4 @@
-import Vue from 'vue'
 import Message from '@/components/message/'
-import { mount } from '@vue/test-utils'
 
 describe('message.spec.js',()=>{
   afterEach(() => {

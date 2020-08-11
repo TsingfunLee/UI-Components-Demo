@@ -1,3 +1,11 @@
+/* iconfont
+-------------------*/
+$--font-path: './fonts/';
+$--font-family: 'iconfont';
+$--icon-size: 16px;
+
+/* color
+--------------------*/
 $--default-theme-color: #409eff !default;
 
 $--primary-color: $--default-theme-color !default;
@@ -5,6 +13,8 @@ $--warning-color: #f8c555 !default;
 $--success-color: #5cbb7a !default;
 $--error-color: #f56c6c !default;
 
+/* text
+--------------------*/
 $--small-text: 14px !default;
 $--medium-text: 18px !default;
 $--large-text: 22px !default;

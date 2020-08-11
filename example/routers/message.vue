@@ -28,20 +28,28 @@
     >
       错误
     </lee-button>
+    <lee-button
+      class="btn"
+      @click="click('primary', 'icon-yonghushu')"
+    >
+      带icon
+    </lee-button>
   </div>
 </template>
 
 <script>
 export default {
   methods: {
-    click(type){
-      // this.$message({
-      //   message: '这是一条提示消息',
-      //   type: type
-      // })
+    click(type, icon){
+      this.$message({
+        message: '这是一条提示消息',
+        type: type,
+        iconClass: icon
+      })
 
-      this.$message[type]('这是一条提示消息')
-    }
+      // this.$message[type]('这是一条提示消息')
+    },
+
   }
 }
 </script>
