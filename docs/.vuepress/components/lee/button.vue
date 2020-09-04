@@ -9,7 +9,6 @@
 </template>
 
 <script>
-// 常用的基本按钮
 export default {
   name: 'LeeButton',
   props: {

@@ -1,0 +1,79 @@
+@import '../common/var.styl';
+// @import '../common/iconfont.scss';
+
+.messages-box {
+  position: fixed;
+  top: 48px;
+  z-index: 99;
+  width: 100%;
+  pointer-events: none;
+
+  .message-box-wrap {
+    text-align: center;
+
+    .message-box {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 15px 20px;
+      margin: 15px;
+      color: white;
+      background-color: mix($--primary-color, white, 50%);
+      border: solid 1px $--primary-color;
+      border-radius: 5px;
+
+      &.primary {
+        background-color: mix($--primary-color, white, 50%);
+        border: solid 1px $--primary-color;
+      }
+
+      &.success {
+        background-color: mix($--success-color, white, 50%);
+        border: solid 1px $--success-color;
+      }
+
+      &.error {
+        background-color: mix($--error-color, white, 50%);
+        border: solid 1px $--error-color;
+      }
+
+      &.warning {
+        background-color: mix($--warning-color, white, 50%);
+        border: solid 1px $--warning-color;
+      }
+
+      .text {
+        [class^="icon-"] {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.lee-fade-enter-active {
+  animation: msg-box-fade-in 1s;
+}
+
+.lee-fade-leave-active {
+  animation: msg-box-fade-out 1s;
+}
+
+@keyframes msg-box-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes msg-box-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

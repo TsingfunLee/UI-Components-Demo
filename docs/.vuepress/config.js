@@ -1,5 +1,6 @@
 const container = require('markdown-it-container')
 const prism = require('prismjs')
+const path = require('path')
 
 module.exports = {
   title: 'UI组件官网',
@@ -50,5 +51,29 @@ module.exports = {
         }
       }
     })
+  },
+  configureWebpack: (config, isServer) => {
+    // if(!isServer){
+      return {
+        module: {
+          rules: [
+            {
+              test: /\.md$/,
+              include: [
+                path.resolve(__dirname, '../components')
+              ],
+              exclude: [
+                path.resolve(__dirname, '../components/README.md')
+              ],
+              use: [
+                {
+                  loader: path.resolve(__dirname, './loader/api-loader.js')
+                },         
+              ]
+            }
+          ]
+        }
+      }
+    // }
   }
 }

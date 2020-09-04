@@ -1,4 +1,4 @@
 module.exports={
   include: './src/components/**/*.vue',
-  outDir: 'docs',
+  outDir: 'doc-vuese',
 }
