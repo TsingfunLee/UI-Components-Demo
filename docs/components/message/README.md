@@ -17,8 +17,8 @@
 
 <script>
 import Vue from 'vue'
-import UI from '../../.vuepress/components/index.js'
-Vue.use(UI)
+import Message from '../../.vuepress/components/lee/message.js'
+Vue.prototype.$message = Message
 export default {
   methods: {
     click(type){

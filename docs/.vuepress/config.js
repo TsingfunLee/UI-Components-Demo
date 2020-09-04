@@ -53,7 +53,7 @@ module.exports = {
     })
   },
   configureWebpack: (config, isServer) => {
-    // if(!isServer){
+    if(!isServer){
       return {
         module: {
           rules: [
@@ -74,6 +74,6 @@ module.exports = {
           ]
         }
       }
-    // }
+    }
   }
 }
