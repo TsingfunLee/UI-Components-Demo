@@ -26,6 +26,21 @@ module.exports = {
       ],
     }
   },
+  plugins: [
+    // [
+    //   '@vuepress/register-components',
+    //   {
+    //     componentsDir: path.resolve(__dirname, '../../src/components'),
+    //     getComponentName: (file)=>{
+    //       return `lee-${file}`
+    //     }
+    //   }
+    // ],
+    [
+      // 在根组件中混入全局组件、方法或其他代码
+      require('./plugin/register-plugin.js')
+    ]
+  ],
   extendMarkdown: md => {
     md.use(container, 'demo', { 
       render: (tokens, idx) => { 

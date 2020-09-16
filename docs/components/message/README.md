@@ -16,9 +16,6 @@
 <lee-button type="error" class="btn" @click="click('error')">error</lee-button>
 
 <script>
-import Vue from 'vue'
-import Message from '../../.vuepress/components/lee/message.js'
-Vue.prototype.$message = Message
 export default {
   methods: {
     click(type){

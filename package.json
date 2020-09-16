@@ -47,6 +47,7 @@
     "@vue/cli-plugin-unit-jest": "^4.4.6",
     "@vue/cli-service": "~4.4.0",
     "@vue/test-utils": "^1.0.3",
+    "@vuepress/plugin-register-components": "^1.5.4",
     "@vuese/cli": "^2.13.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
