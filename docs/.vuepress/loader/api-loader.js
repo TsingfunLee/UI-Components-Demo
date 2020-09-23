@@ -7,7 +7,7 @@ module.exports = function(source){
 
   if(/\r\n## API/.test(source)){
     let name = source.match(/# (?<name>\w+)\r\n/).groups.name
-    let filePath = path.resolve(__dirname, `../components/lee/${name}.vue`)
+    let filePath = path.resolve(__dirname, `../../../src/components/${name}/${name}.vue`)
 
     if(fs.existsSync(filePath)){
       let vueString = fs.readFileSync(filePath, 'utf-8')
