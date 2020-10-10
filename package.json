@@ -15,71 +15,64 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build:js": "vue-cli-service build --target lib --name index src/index.js && webpack --config build/webpack.components.js",
+    "start": "vuepress dev docs",
+    "build:js": "webpack --config build/webpack.components.js",
     "build:css": "npx gulp --gulpfile build/gulp.css.js",
     "build": "npm run build:js && npm run build:css",
-    "lint": "vue-cli-service lint && npx stylelint \"**/*.{scss,vue}\" --fix",
-    "lint:es": "vue-cli-service lint --fix",
+    "lint:es": "npx eslint \"src/components/**/*.{vue,js}\" src/index.js --fix",
     "lint:style": "npx stylelint \"**/*.{scss,vue}\" --fix",
-    "test": "vue-cli-service test:unit",
+    "lint": "npm run lint:es && npm run lint:style",
+    "test": "jest",
     "publish": "npm publish --access public",
-    "doc": "npx vuese gen",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "finish": "npm run build && npm run doc && npm run lint"
+    "docs:build": "vuepress build docs"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,vue,scss}": [
-      "lint",
-      "git add"
+      "npm run lint"
     ]
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-plugin-unit-jest": "^4.4.6",
-    "@vue/cli-service": "~4.4.0",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "@vue/test-utils": "^1.0.3",
-    "@vuepress/plugin-register-components": "^1.5.4",
     "@vuese/cli": "^2.13.1",
-    "babel-core": "^6.26.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.1.0",
+    "babel-jest": "^26.5.2",
+    "cache-loader": "^4.1.0",
     "eslint": "^7.5.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^23.18.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^4.1.0",
+    "hash-sum": "^2.0.0",
+    "jest": "^26.4.2",
     "lint-staged": "^10.2.11",
-    "node-sass": "^4.14.1",
-    "sass": "^1.26.10",
-    "sass-loader": "^9.0.2",
+    "sass-loader": "^10.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-recess-order": "^2.0.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
-    "vue-router": "^3.3.4",
-    "vue-template-compiler": "^2.6.11",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.12",
     "vuepress": "^1.5.4",
-    "webpack-cli": "^3.3.12",
-    "webpack-node-externals": "^2.5.0"
+    "webpack-node-externals": "^2.5.0",
+    "yorkie": "^2.0.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.11.2"
+  }
 }
