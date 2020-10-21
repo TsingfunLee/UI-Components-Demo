@@ -7,7 +7,9 @@ var nodeExternals = require('webpack-node-externals')
 const fs = require('fs')
 const items = fs.readdirSync('./src/components')
 // 动态生成entry入口
-const entryHash = {}
+const entryHash = {
+  index: './src/index.js'
+}
 if(items.length>0){
   items.forEach(ele=>{
     entryHash[ele] = `./src/components/${ele}/index.js`
@@ -25,7 +27,7 @@ module.exports = {
   entry: entryHash,
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../dist/libs'),
+    path: path.resolve(__dirname, '../dist/'),
     publicPath: '/',
     libraryTarget: 'commonjs2',
   },

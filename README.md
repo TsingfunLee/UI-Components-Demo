@@ -6,7 +6,7 @@
 ## NPM Script
 ``npm run``
 ```
-serve //编译启动服务器并热更新进行开发
+start //编译启动服务器并热更新进行开发
 lint:es //语法检查es并fix
 lint:style //语法检查scss文件并fix
 lint //语法检查并fix

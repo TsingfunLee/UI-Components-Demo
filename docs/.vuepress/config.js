@@ -5,7 +5,9 @@ const path = require('path')
 module.exports = {
   title: 'UI组件官网',
   description: 'UI组件库',
+  host: 'localhost',
   port: 8888,
+  extraWatchFiles: [],
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
@@ -61,6 +63,11 @@ module.exports = {
   configureWebpack: (config, isServer) => {
     if(!isServer){
       return {
+        devServer: {
+          hot: true,
+          open: true,
+          hotOnly: false,
+        },
         module: {
           rules: [
             {

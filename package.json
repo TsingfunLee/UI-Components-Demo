@@ -15,7 +15,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "start": "vuepress dev docs",
+    "start": "vuepress dev docs --open",
     "build:js": "webpack --config build/webpack.components.js",
     "build:css": "npx gulp --gulpfile build/gulp.css.js",
     "build": "npm run build:js && npm run build:css",
@@ -46,6 +46,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.5.2",
+    "babel-loader": "^8.1.0",
     "cache-loader": "^4.1.0",
     "eslint": "^7.5.0",
     "eslint-plugin-vue": "^6.2.2",
@@ -62,8 +63,10 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
     "vue-jest": "^3.0.7",
+    "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "vuepress": "^1.5.4",
+    "webpack-cli": "^4.1.0",
     "webpack-node-externals": "^2.5.0",
     "yorkie": "^2.0.0"
   },

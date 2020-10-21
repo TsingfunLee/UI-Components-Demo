@@ -4,7 +4,7 @@ const path = require('path')
 const fs = require('fs')
 
 module.exports = function(source){
-
+  console.log('api-loader')
   if(/\r\n## API/.test(source)){
     let name = source.match(/# (?<name>\w+)\r\n/).groups.name
     let filePath = path.resolve(__dirname, `../../../src/components/${name}/${name}.vue`)
