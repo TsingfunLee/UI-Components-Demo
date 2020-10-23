@@ -7,15 +7,14 @@
 ``npm run``
 ```
 start //编译启动服务器并热更新进行开发
+build:js //打包js文件
+build:css //打包css文件
+build //打包
 lint:es //语法检查es并fix
 lint:style //语法检查scss文件并fix
 lint //语法检查并fix
 test //单元测试
-doc //生成各组件说明文档
-build:js //打包js文件
-build:css //打包css文件
-build //打包
-finish //语法检查&生成文档&打包
+docs //生成说明文档网站
 publish //发布包至NPM
 ```
 
@@ -57,22 +56,23 @@ TO DO
 ## Build
 在``build``文件夹中存放构建配置文件。
 
-js总包用vue-cli lib模式默认配置打包，各组件js用webpack单独打包，配置在[webpack.components.js](build/webpack.components.js)文件中。
+js用webpack打包，配置在[webpack.components.js](build/webpack.components.js)文件中。
 
 css用gulp打包，配置在[gulp.css.js](build/gulp.css.js)文件中。
 
-``dist``文件夹存放构建后的文件。``dist/libs``文件夹中是组件单独打包文件。
+``dist``文件夹存放构建后的文件。
 
 ## Docs
-使用``@vuese/cli``生成组件说明。配置文件是[vuese.config.js](vuese.config.js)
+文档使用VuePress生成静态网页。参考[vuepress官方文档](https://vuepress.vuejs.org/zh/)。
 
-运行``npm run doc``命令可自动生成组件说明。
+``docs``文件夹中存放说明文档，用markdown格式编写。
+``.vupress``文件夹中存放VuePress配置文件。
 
-文档说明在docs文件夹中。
+### MarkDown
++ 在``:::``中编写示例代码，会自动生成样式
++ 在文档末尾加上``## API``，会自动在文档末尾插入API说明
 
-写法参照示例组件中的注释。
-
-更多请参考[@vuese/cli官方文档](https://vuese.org/cli/)
+API文档由@vuese解析生成，书写方式可参考示例。更多请参考[@vuese/cli官方文档](https://vuese.org/cli/)
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)

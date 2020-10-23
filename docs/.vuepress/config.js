@@ -7,6 +7,7 @@ module.exports = {
   description: 'UI组件库',
   host: 'localhost',
   port: 8888,
+  dest: path.resolve(__dirname, '../../site/'),
   extraWatchFiles: [],
   themeConfig: {
     nav: [

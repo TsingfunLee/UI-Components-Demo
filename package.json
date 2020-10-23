@@ -8,7 +8,7 @@
     "Component",
     "Vue"
   ],
-  "main": "dist/index.common.js",
+  "main": "dist/index.js",
   "files": [
     "dist",
     "src"
@@ -23,8 +23,8 @@
     "lint:style": "npx stylelint \"**/*.{scss,vue}\" --fix",
     "lint": "npm run lint:es && npm run lint:style",
     "test": "jest",
-    "publish": "npm publish --access public",
-    "docs:build": "vuepress build docs"
+    "docs": "vuepress build docs",
+    "publish": "npm publish --access public"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
