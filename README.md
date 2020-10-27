@@ -16,6 +16,7 @@ lint //语法检查并fix
 test //单元测试
 docs //生成说明文档网站
 publish //发布包至NPM
+cm // 提交代码至git
 ```
 
 ### Customize configuration
@@ -73,6 +74,9 @@ css用gulp打包，配置在[gulp.css.js](build/gulp.css.js)文件中。
 + 在文档末尾加上``## API``，会自动在文档末尾插入API说明
 
 API文档由@vuese解析生成，书写方式可参考示例。更多请参考[@vuese/cli官方文档](https://vuese.org/cli/)
+
+## Commit
+使用commitizen工具规范commit message。
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)
