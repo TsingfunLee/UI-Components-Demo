@@ -24,10 +24,11 @@
     "lint": "npm run lint:es && npm run lint:style",
     "test": "jest",
     "docs": "vuepress build docs",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "cm" : "cz"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "cm"
   },
   "lint-staged": {
     "*.{js,vue,scss}": [
@@ -48,6 +49,7 @@
     "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
     "cache-loader": "^4.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.5.0",
     "eslint-plugin-vue": "^6.2.2",
     "gulp": "^4.0.2",
@@ -77,5 +79,10 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.11.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
