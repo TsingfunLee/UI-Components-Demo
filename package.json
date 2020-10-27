@@ -28,7 +28,7 @@
     "cm" : "cz"
   },
   "gitHooks": {
-    "pre-commit": "cm"
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,vue,scss}": [
