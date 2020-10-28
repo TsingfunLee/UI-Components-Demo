@@ -9,12 +9,12 @@
 start //编译启动服务器并热更新进行开发
 build:js //打包js文件
 build:css //打包css文件
+build:site // 生成说明文档网站
 build //打包
 lint:es //语法检查es并fix
 lint:style //语法检查scss文件并fix
 lint //语法检查并fix
 test //单元测试
-docs //生成说明文档网站
 publish //发布包至NPM
 cm // 提交代码至git
 ```

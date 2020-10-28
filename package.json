@@ -18,14 +18,14 @@
     "start": "vuepress dev docs --open",
     "build:js": "webpack --config build/webpack.components.js",
     "build:css": "npx gulp --gulpfile build/gulp.css.js",
+    "build:site": "vuepress build docs",
     "build": "npm run build:js && npm run build:css",
     "lint:es": "npx eslint \"src/components/**/*.{vue,js}\" src/index.js --fix",
     "lint:style": "npx stylelint \"**/*.{scss,vue}\" --fix",
     "lint": "npm run lint:es && npm run lint:style",
     "test": "jest",
-    "docs": "vuepress build docs",
     "publish": "npm publish --access public",
-    "cm" : "cz"
+    "cm": "cz"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
