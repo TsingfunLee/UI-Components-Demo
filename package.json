@@ -60,7 +60,7 @@
     "jest": "^26.4.2",
     "lint-staged": "^10.2.11",
     "sass-loader": "^10.0.2",
-    "stylelint": "^13.6.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-recess-order": "^2.0.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
